@@ -11,7 +11,9 @@ app.get("/books", (req, res)=>{
 app.get("/dom",(req, res)=>{
     res.redirect("/public/dom/index.hmtl")
 })
-app.get("/express", (req, res) => res.send("Express on Vercel!"));
+app.get("/express", (req, res) => res.status(200).send({
+    books
+}));
 app.get("/cliente_servidor", (req, res) => res.send("Cliente Servidor on Vercel!"));
 
 
